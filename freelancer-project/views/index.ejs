@@ -1,0 +1,12 @@
+<h1>Projects</h1>
+<a href="/add">Add New Project</a>
+<div>
+  <% projects.forEach(project => { %>
+    <div>
+      <h2><%= project.title %></h2>
+      <p><%= project.description %></p>
+      <img src="<%= project.image_url %>" alt="<%= project.title %>">
+      <a href="/edit/<%= project._id %>">Edit</a>
+    </div>
+  <% }); %>
+</div>
